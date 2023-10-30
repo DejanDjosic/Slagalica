@@ -1,6 +1,5 @@
 <?php
 include('../../includes/header.php');
-// include('../auth/registration_process.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,19 +13,18 @@ include('../../includes/header.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
-    <!-- <script src='../scripts/validation.js'></script> -->
 </head>
 
 <body>
     <div class='main'>
         <div class='form-register'>
             <div class='wrapper'>
-                <form method='post' onsubmit="return validateForm();">
+                <form method='post'>
                     <h1>Registrujte se</h1>
                     <label>Korisničko ime:</label>
                     <input type='text' name='ime'>
                     <label>E-mail adresa:</label>
-                    <input type='text' id='mail' name='mejl'>
+                    <input type='text' name='mejl'>
                     <label>Lozinka:</label>
                     <input type='password' name='lozinka1'>
                     <label>Potvrda lozinke:</label>
@@ -45,3 +43,4 @@ include('../../includes/header.php');
     </div>
 </body>
 </html>
+<?php include('../auth/registration_process.php'); ?>

@@ -10,7 +10,7 @@
 .main {
   margin-top: 35px;
   background: linear-gradient(to bottom, #22aed1, #f0a202);
-  height: 110vh;
+  height: 115vh;
 }
 
 .wrapper {
@@ -24,6 +24,7 @@
   margin: 5px;
   font-size: 50px;
   font-family: 'DynaPuff', cursive;
+  text-align: center;
 }
 
 .header {
@@ -31,7 +32,7 @@
   justify-content: end;
   align-items: center;
   padding: 5px;
-  background-color: #02010a;
+  background-color: transparent;
   color: #e8f7ee;
   width: 100%;
   position: fixed;
@@ -133,10 +134,14 @@
   text-align: center;
 }
 
-.endButton {
+.potvrdi
+{
+  margin:auto
+}
+
+.btnEnd {
   background-color: #f30606;
   color: #fff;
-  border: none;
   border-radius: 10px;
   min-height: 100px;
   min-width: 120px;
@@ -263,7 +268,7 @@ form a {
 }
 
 .numbercell,
-.backspace,
+.btnBackSpace,
 .charcell,
 .check-word {
   width: 100px;
@@ -322,7 +327,7 @@ form a {
 .display,
 .medium-cell,
 .large-cell,
-.backspace,
+.btnBackSpace,
 .allInputs,
 #question,
 #js-timer {

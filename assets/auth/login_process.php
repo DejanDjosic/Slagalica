@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['session_id']) {
+if (isset($_SESSION['session_id'])) {
     echo "<script>alert(\"Već ste ulogovani!\")</script>";
 } 
 else if (empty($_POST['sifra']) || empty($_POST['mejl'])) {
