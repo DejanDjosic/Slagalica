@@ -3,8 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'DynaPuff', cursive;
-
   font-family: 'Poppins', sans-serif;
+  user-select: none;
 }
 
 .main {
@@ -32,7 +32,7 @@
   justify-content: end;
   align-items: center;
   padding: 5px;
-  background-color: transparent;
+  background-color: #000;
   color: #e8f7ee;
   width: 100%;
   position: fixed;
@@ -134,7 +134,7 @@
   text-align: center;
 }
 
-.potvrdi
+.mrgnAuto
 {
   margin:auto
 }
@@ -178,7 +178,6 @@ button {
 .mrgn0 {
   margin: 0;
 }
-
 
 .cell:hover,
 .large-cell:hover,
@@ -269,8 +268,7 @@ form a {
 
 .numbercell,
 .btnBackSpace,
-.charcell,
-.check-word {
+.charcell {
   width: 100px;
   height: 100px;
   border: 1px solid black;
@@ -297,14 +295,20 @@ form a {
   cursor: pointer;
   margin-bottom: 1rem;
 }
-.check-word {
-  border: solid black 2px;
+.check-word
+{
+  border: solid black 3px;
   height: 45px;
   width: 45px;
   margin-left: 20px;
   background-image: url('../img/question-mark.png');
   background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
+
+
 .check-word.correct {
   background-image: url('../img/check.png');
   background-size: cover;
@@ -313,30 +317,11 @@ form a {
   background-image: url('../img/wrong.png');
   background-size: cover;
 }
-
-#back-space {
-  height: 45px;
-  width: 45px;
-  border: solid black 2px;
-  margin-left: 20px;
-  line-height: 40px;
-}
-
-.random-number,
-.operators,
-.display,
-.medium-cell,
-.large-cell,
-.btnBackSpace,
-.allInputs,
-#question,
-#js-timer {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.check-word.backspace{
+  background-image: url('../img/backspace.png');
+  background-size: cover;
+  border:none;
+  border-radius: 6px;
 }
 .random-number,
 .input-numbers,

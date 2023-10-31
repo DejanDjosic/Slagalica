@@ -1,4 +1,4 @@
-let display = document.querySelector('.display');
+const display = document.querySelector('.display');
 const buttons = Array.from(document.querySelectorAll('.allInputs .numbercell'));
 const randoms = Array.from(document.querySelectorAll('.game-number'));
 const btnBigNumber = document.querySelector('.big-game-number');
@@ -19,12 +19,12 @@ const hiddenInput = document.querySelector('.hiddenInput');
 let score = 0;
 let userSolution = 0;
 
-let displayArray = [];
+const displayArray = [];
 
 const bigNumber = [25, 50, 75, 100];
 const midNumber = [10, 15, 20];
 
-let timer = document.getElementById('timer');
+const timer = document.getElementById('timer');
 
 
 const countdown=()=> {
@@ -33,14 +33,15 @@ const countdown=()=> {
 }
 
 const outOfTime=()=> {
-    clearInterval(myInterval);
+    clearInterval(timeInterval);
     alert('ponestalo je vremena');
     submit();
     endGame();
   }
 
-const myInterval = setInterval(countdown, 1000);
+const timeInterval = setInterval(countdown, 1000);
 
+const stopCountdown=()=>clearInterval(timeInterval);
 
 const generateNumberFromArray=(ar)=> {
   let randomNumber = 0;
@@ -83,9 +84,8 @@ generateSolution();
 const typing=(target)=> {
     displayArray.push(target.innerText);
     display.innerHTML += target.innerText;
-    if (target.closest('.operators') === null)
+    if (target.closest('.operators') === null)      //forbid typing the same number again
       target.classList.add('zero-pointer');
-    //forbid typing the same number again
   }
 
 
@@ -93,7 +93,7 @@ buttons.map((button) => {
   button.addEventListener('click', (e) => {
     if (e.target.hasAttribute('id')) {
       newNumber = e.target.innerText;
-      if (lastAdded === '') {
+      if (lastAdded === '') {     //only if lastAdded is an operant or '' the user is able to type another number
         lastAdded = newNumber;
         typing(e.target);
       }
@@ -128,22 +128,18 @@ btnBackSpace.addEventListener('click', backspace);
 
 const submit=()=> {
   if (display.innerHTML) {
+    displayArray.length = 0;
+    lastAdded = '';
     try {
       userSolution = eval(display.innerText);
       if (userSolution) {
         giveUp.classList.add('hidden');
         makeModal(userSolution, compareToSolution(userSolution));
       }
-
-      displayArray = [];
-      lastAdded = '';
-      clearInterval(myInterval);
+      clearInterval(timeInterval);
       endGame();
     } catch (error) {
       alert('Molimo unesite validan izraz.');
-      display.innerText = '';
-      displayArray = [];
-      lastAdded = '';
     }
   }
 }
@@ -174,22 +170,18 @@ const compareToSolution=(userSolution)=> {
   switch (true) {
     case difference === 0:
       score += 30;
-      console.log('Tacno gari');
       break;
 
     case difference <= 5:
       score += 25;
-      console.log('manje od 5');
       break;
 
     case difference <= 10:
       score += 15;
-      console.log('manje od 10');
       break;
 
     case difference <= 15:
       score += 10;
-      console.log('manje od 15');
       break;
 
     default:
@@ -204,7 +196,5 @@ const endGame=()=> {
   });
   btnBackSpace.classList.add('zero-pointer');
   btnSubmit.classList.add('zero-pointer');
-  link.classList.remove('hidden');
 }
-
 

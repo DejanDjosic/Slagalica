@@ -68,8 +68,8 @@ if (isset($_POST[$gameName . '-odustani'])) {
 
                         <div class="display"></div>
                         <div class="btnBackspace">&larr;</div>
-                        <div class='potvrdi'>
-                            <div class="cell">Potvrdi</div>
+                        <div class="mrgnAuto">
+                        <div class="cell potvrdi">Potvrdi</div>
                         </div>
                     </div>
                 </div>
