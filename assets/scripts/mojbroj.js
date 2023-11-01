@@ -1,3 +1,4 @@
+'use strict';
 const display = document.querySelector('.display');
 const buttons = Array.from(document.querySelectorAll('.allInputs .numbercell'));
 const randoms = Array.from(document.querySelectorAll('.game-number'));
@@ -33,7 +34,7 @@ const countdown=()=> {
 }
 
 const outOfTime=()=> {
-    clearInterval(timeInterval);
+stopCountdown();
     alert('ponestalo je vremena');
     submit();
     endGame();

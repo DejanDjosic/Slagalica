@@ -30,22 +30,17 @@ if (isset($_POST[$gameName . '-odustani'])) {
     <title>Slagalica | Slagalica</title>
     <link rel="stylesheet" href="assets/style/main.css" />
 </head>
-<div class="main flex">
-    <header>
-        <h1 id='slagalica-naslov'>SLAGALICA</h1>
-    </header>
-    <div class="wrapper">
-        <div class="game-container">
-            <div id="js-timer" class="flex-right">
-                <div id="timer">150</div>
-            </div>
-            <div class="chars flex-row">
-                <div class="charcell"></div>
-                <div class="charcell"></div>
-                <div class="charcell"></div>
-                <div class="charcell"></div>
-                <div class="charcell"></div>
-                <div class="charcell"></div>
+
+<body>
+    <div class="main flex">
+        <header>
+            <h1 id='slagalica-naslov'>SLAGALICA</h1>
+        </header>
+        <div class="wrapper">
+            <div class="game-container">
+                <div id="js-timer" class="flex-right">
+                    <div id="timer">150</div>
+                </div>
                 <div class="chars flex-row">
                     <div class="charcell"></div>
                     <div class="charcell"></div>
@@ -53,40 +48,47 @@ if (isset($_POST[$gameName . '-odustani'])) {
                     <div class="charcell"></div>
                     <div class="charcell"></div>
                     <div class="charcell"></div>
+                    <div class="chars flex-row">
+                        <div class="charcell"></div>
+                        <div class="charcell"></div>
+                        <div class="charcell"></div>
+                        <div class="charcell"></div>
+                        <div class="charcell"></div>
+                        <div class="charcell"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="flex-row">
-                <div class="display"></div>
+                <div class="flex-row">
+                    <div class="display"></div>
+                    <div class="flex">
+                        <div class="check-word"></div>
+                        <div class="check-word backspace"></div>
+                    </div>
+                </div>
                 <div class="flex">
-                    <div class="check-word"></div>
-                    <div class="check-word backspace"></div>
+                    <div class="cell">Potvrdi</div>
+                </div>
+                <div class="flex-left">
+                    <form method='post'>
+                        <input type='submit' class="cell giveup" name='slagalica-odustani' value='Odustani'>
+
+                    </form>
                 </div>
             </div>
-            <div class="flex">
-                <div class="cell">Potvrdi</div>
+        </div>
+        <div class="modal hidden">
+            <div class="modal-message">
             </div>
-            <div class="flex-left">
-                <form method='post'>
-                    <input type='submit' class="cell giveup" name='slagalica-odustani' value='Odustani'>
+            <form method='post'>
+                <input class='hiddenInput' type='hidden' name='slagalica-score'>
 
-                </form>
-            </div>
+                <input type='submit' class='cell' name='slagalica-povratak' value='Povratak u glavni meni'>
+
+            </form>
         </div>
     </div>
-    <div class="modal hidden">
-        <div class="modal-message">
-        </div>
-        <form method='post'>
-            <input class='hiddenInput' type='hidden' name='slagalica-score'>
-
-            <input type='submit' class='cell' name='slagalica-povratak' value='Povratak u glavni meni'>
-
-        </form>
     </div>
-</div>
-</div>
 
-<body>
+
     <script src='assets/scripts/slagalica.js'></script>
 </body>
 

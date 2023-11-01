@@ -76,8 +76,8 @@ if (isset($_POST[$gameName . '-odustani'])) {
                 <div class="flex-left">
                     <form method='post'>
                         <input type='submit' class="cell giveup" name='mojbroj-odustani' value='Odustani'>
+                    </form>
                 </div>
-                </form>
             </div>
             <div class="modal hidden">
                 <div class='flex'>
