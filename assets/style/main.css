@@ -247,7 +247,6 @@ form a {
 .grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 50px;
 }
 
 .gamemgrid {

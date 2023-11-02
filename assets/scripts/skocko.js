@@ -27,19 +27,19 @@ const hiddenInput = document.querySelector('.hiddenInput');
 const timer = document.getElementById('timer');
 
 const countdown = () => {
-  timer.innerHTML -= '1';
-  if (timer.innerHTML === '0') outOfTime();
-};
-
-const outOfTime = () => {
-stopCountdown();
-  alert('ponestalo je vremena');
-  endGame();
-};
-
-const timeInterval = setInterval(countdown, 1000);
-
-const stopCountdown = () => clearInterval(timeInterval);
+    timer.innerHTML -= '1';
+    if (timer.innerHTML === '0') outOfTime();
+  };
+  
+  const outOfTime = () => {
+  stopCountdown();
+    alert('ponestalo je vremena');
+    endGame();
+  };
+  
+  const timeInterval = setInterval(countdown, 1000);
+  
+  const stopCountdown = () => clearInterval(timeInterval);
 
 const generateCombination = () => {
   const aiCombination = [];
