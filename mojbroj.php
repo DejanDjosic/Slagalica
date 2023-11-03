@@ -29,7 +29,6 @@ if (isset($_POST[$gameName . '-odustani'])) {
     <title>Slagalica | Moj broj</title>
     <link rel="stylesheet" href="assets/style/main.css" />
 </head>
-
 <body>
     <div class="main flex">
         <header>

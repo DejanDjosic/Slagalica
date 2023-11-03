@@ -29,7 +29,7 @@ if (isset($_POST[$gameName . '-odustani'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slagalica | Skočko</title>
+    <title>Slagalica | Ko zna zna</title>
     <link rel="stylesheet" href="assets/style/main.css" />
 </head>
 

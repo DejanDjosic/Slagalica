@@ -10,7 +10,8 @@
 .main {
   margin-top: 35px;
   background: linear-gradient(to bottom, #22aed1, #f0a202);
-  height: 115vh;
+  min-height: 105vh;
+  max-height: 140vh;
 }
 
 .wrapper {
@@ -321,7 +322,8 @@ form a {
 }
 .random-number,
 .input-numbers,
-.question {
+.question
+.spojniceHeading {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -539,17 +541,16 @@ form a {
   gap: 0px;
   height: 700px;
   width: 640px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 
-#spojniceGrid {
-  height: 880px;
+#spojnice-container {
+  height: 1050px;
 }
-#spojniceHeading {
-  width: 600px;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 10px;
+.spojniceHeading {
+max-width: 600px;
+text-align: center;
+margin-bottom: 3rem;
 }
 
 .flex-right {
