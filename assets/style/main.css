@@ -322,8 +322,7 @@ form a {
 }
 .random-number,
 .input-numbers,
-.question
-.spojniceHeading {
+.question .spojniceHeading {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -415,11 +414,9 @@ form a {
   display: flex;
   justify-content: center;
 }
-.available-solutions
-{
+.available-solutions {
   display: flex;
   justify-content: start;
-
 }
 .legend-col {
   display: flex;
@@ -456,8 +453,7 @@ form a {
   background-color: green;
 }
 
-.solution-btn
-{
+.solution-btn {
   width: 55px;
   height: 55px;
   background-size: cover;
@@ -548,9 +544,9 @@ form a {
   height: 1050px;
 }
 .spojniceHeading {
-max-width: 600px;
-text-align: center;
-margin-bottom: 3rem;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .flex-right {
@@ -605,25 +601,21 @@ button {
 
 /*asocijacije */
 #asoc-container {
-  width: 1280px;
+  width: 1290px;
   height: 780px;
 }
 .asoc-grid {
   display: grid;
-
   grid-template-columns: 24% 24% 24% 24%;
   gap: 15px;
 }
-.asoc-column:nth-of-type(5) {
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
 .solution-cell {
   width: 100%;
-  margin: 1px;
   height: 90px;
   padding: 35px 0;
   font-size: 20px;
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
 
 table {
