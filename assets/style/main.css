@@ -495,7 +495,8 @@ form a {
 }
 
 .large-cell.correct,
-.medium-cell.correct {
+.medium-cell.correct,
+.solution-cell.correct {
   background-color: green;
   color: black;
   font-weight: bold;
@@ -508,7 +509,8 @@ form a {
 }
 
 .large-cell.wrong,
-.medium-cell.wrong {
+.medium-cell.wrong,
+.solution-cell.wrong {
   background-color: red;
   color: #000000;
   font-weight: bold;

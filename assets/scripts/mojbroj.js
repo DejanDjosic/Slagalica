@@ -93,13 +93,12 @@ const typing=(target)=> {
 buttons.map((button) => {
   button.addEventListener('click', (e) => {
     if (e.target.hasAttribute('id')) {
-      newNumber = e.target.innerText;
+      let newNumber = e.target.innerText;
       if (lastAdded === '') {     //only if lastAdded is an operant or '' the user is able to type another number
         lastAdded = newNumber;
         typing(e.target);
       }
     } else {
-      newOperant = e.target;
       typing(e.target);
       lastAdded = '';
     }
@@ -129,18 +128,19 @@ btnBackSpace.addEventListener('click', backspace);
 
 const submit=()=> {
   if (display.innerHTML) {
-    displayArray.length = 0;
     lastAdded = '';
     try {
       userSolution = eval(display.innerText);
       if (userSolution) {
         giveUp.classList.add('hidden');
-        makeModal(userSolution, compareToSolution(userSolution));
+        showModal(userSolution, compareToSolution(userSolution));
       }
       clearInterval(timeInterval);
+      displayArray.length = 0;
       endGame();
     } catch (error) {
       alert('Molimo unesite validan izraz.');
+      console.log(displayArray);
     }
   }
 }
@@ -149,7 +149,7 @@ btnSubmit.addEventListener('click', () => {
     submit();
   });
 
-const makeModal=(userSolution, score)=> {
+const showModal=(userSolution, score)=> {
   modal.classList.remove('hidden');
   let headings = document.querySelector('.headings');
   let headingSolution = document.createElement('h1');

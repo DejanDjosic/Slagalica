@@ -1,5 +1,25 @@
-<?php
-include('includes/header.php');
+<?php 
+include("includes/header.php");
+
+$gameName = 'asocijacije';
+
+if (isset($_SESSION[$gameName])) {
+    echo "<script type='text/javascript'>alert('Već ste odigrali ovu igru!')</script>";
+    header('Refresh: 0; URL = game-menu.php');
+    exit;
+}
+
+if (isset($_POST['asocijacije-povratak']) && isset($_POST['asocijacije-score'])) {
+    $_SESSION[$gameName] = $_POST['asocijacije-score'];
+    header('Refresh: 0; URL = game-menu.php');
+    exit;
+}
+
+if (isset($_POST[$gameName . '-odustani'])) {
+    $_SESSION[$gameName] = 0;
+    header('Refresh: 0; URL = game-menu.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +52,21 @@ include('includes/header.php');
                     <form method='post'>
                         <input type='submit' class="cell giveup" name='asocijacije-odustani' value='Odustani'>
                     </form>
-                    <div class='cell hidden' value='Povratak u glavni meni' id='returnModal'>
-                    </div>
+                    <div class='cell hidden return-modal'>Povratak u glavni meni</div>
+                </div>
+            </div>
+            <div class="modal hidden">
+                <div class="closing flex-right">
+                    <button class="button-x">&times;</button>
+                </div>
+                <div class='headings'></div>
+                <div class="link margin-auto">
+                    <form method='post'>
+                        <input class='hiddenInput' type='hidden' name='spojnice-score'>
+
+                        <input type='submit' class='cell' name='spojnice-povratak' value='Povratak u glavni meni'>
+
+                    </form>
                 </div>
             </div>
         </div>

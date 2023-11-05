@@ -69,7 +69,6 @@ if (isset($_POST[$gameName . '-odustani'])) {
         <h1 class='heading'></h1>
         <div class="link margin-auto">
             <form method='post'>
-                <div class='heading'></div>
                 <input class='hiddenInput' type='hidden' name='spojnice-score'>
 
                 <input type='submit' class='cell' name='spojnice-povratak' value='Povratak u glavni meni'>
