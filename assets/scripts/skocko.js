@@ -52,6 +52,7 @@ const generateCombination = () => {
 };
 
 const aiCombination = generateCombination();
+console.log(aiCombination);
 
 const selectTechnology = (e) => {
   if (activeCellIndex < 4) {

@@ -62,9 +62,9 @@ if (isset($_POST[$gameName . '-odustani'])) {
                 <div class='headings'></div>
                 <div class="link margin-auto">
                     <form method='post'>
-                        <input class='hiddenInput' type='hidden' name='spojnice-score'>
+                        <input class='hiddenInput' type='hidden' name='asocijacije-score'>
 
-                        <input type='submit' class='cell' name='spojnice-povratak' value='Povratak u glavni meni'>
+                        <input type='submit' class='cell' name='asocijacije-povratak' value='Povratak u glavni meni'>
 
                     </form>
                 </div>
