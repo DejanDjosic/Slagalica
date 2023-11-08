@@ -648,3 +648,18 @@ th {
   width: 1120px;
   margin-bottom: 20px;
 }
+
+#profile-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#profile-game-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+#profile-wrapper {
+  max-width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
