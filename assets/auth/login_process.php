@@ -26,3 +26,4 @@ else if (empty($_POST['sifra']) || empty($_POST['mejl'])) {
         echo "<script>alert(\"Pogrešan mejl ili lozinka!\")</script>";
     }
 }
+?>
