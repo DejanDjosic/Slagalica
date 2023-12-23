@@ -20,7 +20,7 @@ else if (empty($_POST['sifra']) || empty($_POST['mejl'])) {
         $_SESSION['korIme'] = $red['ime'];
         $_SESSION['id_korisnika'] = $red['korisnikID'];
 
-        header('Location: /slagalica/index.php');
+        header('Location: /slagalica-master/index.php');
         exit();
     } else {
         echo "<script>alert(\"Pogrešan mejl ili lozinka!\")</script>";
