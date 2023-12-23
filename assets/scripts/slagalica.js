@@ -178,6 +178,7 @@ const possibleWords = [
   'VOŠTATI',
   'PITA',
   'UPITAVA',
+  'PITAO',
   'UPITA',
   'UPITAŠ',
   'OPAT',
