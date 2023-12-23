@@ -24,6 +24,8 @@ if (isset($_POST['dodavanje'])) {
             $resultMaxID = $connection->query($queryMaxID);
             $maxID = $resultMaxID->fetch_assoc();
             $id = ($maxID['max_id'] !== null) ? $maxID['max_id'] + 1 : 1;
+            
+            $lozinka1=password_hash($lozinka1,PASSWORD_BCRYPT);
 
             $query = $connection->prepare("INSERT INTO korisnik (korisnikID, mejl, ime, sifra) VALUES (?, ?, ?, ?)");
             $query->bind_param('isss', $id, $mejl, $ime, $lozinka1);
