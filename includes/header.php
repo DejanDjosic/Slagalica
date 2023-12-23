@@ -5,7 +5,7 @@ include("connection.php");
 
 try {
     $headerContent = "<div class='header'>";
-    $base_url = 'http://localhost/slagalica/';
+    $base_url = 'http://localhost/slagalica-master/';
 
     if (isset($_SESSION['korIme']) && isset($_SESSION['session_id'])) {
         $username = $_SESSION['korIme'];
