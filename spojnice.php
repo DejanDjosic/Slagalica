@@ -32,7 +32,7 @@ if (isset($_POST[$gameName . '-odustani'])) {
 </head>
 
 <body>
-    <div class="main flex">
+    <div class="main display-flex">
         <header>
             <h1 id='slagalica-naslov'>SLAGALICA</h1>
         </header>
